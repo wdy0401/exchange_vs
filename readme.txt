@@ -1,0 +1,3 @@
+need lib 
+	boost
+	protobuffer
