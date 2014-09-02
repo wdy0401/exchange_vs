@@ -51,21 +51,21 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">exchange</TargetName>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\include;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\libs\protobuf\Debug_lib;E:\libs\boost_vs2010;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include;E:\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib;E:\libs\protobuf\Debug_lib;E:\libs\boost_vs2010;$(LibraryPath)</LibraryPath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\include;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\libs\protobuf\Release_lib;E:\libs\boost_vs2010;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtWidgets;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtGui;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtCore;release;.;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore;release;.;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -75,8 +75,8 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\qtmain.lib;D:\Qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Core.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Widgets.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Gui.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib;D:\Qt_vs_5_3_1\5.3\msvc2010_opengl\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\qtmain.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Core.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Widgets.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Gui.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -98,7 +98,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtWidgets;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtGui;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtCore;debug;.;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore;debug;.;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -106,7 +106,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -116,8 +116,8 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\qtmaind.lib;D:\Qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Cored.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Widgetsd.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Guid.lib;D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\qt_vs_5_3_1\5.3\msvc2010_opengl\lib;D:\Qt_vs_5_3_1\5.3\msvc2010_opengl\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\qtmaind.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Cored.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Widgetsd.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Guid.lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib;E:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -181,11 +181,11 @@
     <ClInclude Include="test_function.h" />
     <CustomBuild Include="mainwindow.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG  "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtWidgets" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtGui" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtCore" "-I.\release" "-I." "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\release" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing mainwindow.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB  "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtWidgets" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtGui" "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\include\QtCore" "-I.\debug" "-I." "-ID:\qt_vs_5_3_1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\debug" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing mainwindow.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
     </CustomBuild>
@@ -216,7 +216,7 @@
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Qt5Version_x0020_Win32="msvc2010_opengl" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" />
+      <UserProperties Qt5Version_x0020_Win32="5.3.1" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
