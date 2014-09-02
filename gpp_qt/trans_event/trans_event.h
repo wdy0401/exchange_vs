@@ -25,7 +25,8 @@ public:
 	void datafeed_me(const std::string & symbol, const std::string & ba, long level, double price, long size);//标准bid ask 消息
 	void datafeed_me(const std::string &,const std::map<std::string,std::string> &);//非标准消息
 	
-    void tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size);
+    void tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size);//add order
+	void fp_tactic(const std::string & message);
 private:
 	bool _recordmessage;
 	std::ifstream * _pfile;

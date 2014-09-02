@@ -71,3 +71,8 @@ void trans_event::datafeed_me(const std::string & message_type,const std::map<st
     loginfo.writeinfo(wfunction::itos(map_message.size()));
     return;//目前不处理复杂消息
 }
+void trans_event::fp_tactic(const std::string & message)
+{
+	//这个还得写个protobuffer
+	//cout<<type<<"  "<<info<<endl;
+}
