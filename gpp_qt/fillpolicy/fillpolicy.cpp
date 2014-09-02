@@ -7,7 +7,9 @@
 
 extern trans_event te;
 using namespace std;
-
+//updateorderlist时将消息放入某容器，待全部order处理后 发出消息
+//对于tactic来说 会立刻得到fp的信息并反馈
+//tactic 先得到fp的信息 后得到quote的信息 在截面数据的情形下是正确的 
 void fillpolicy::updateorderlist(orderlist & ol,orderbook & ob)
 {
 	//消息fill					检测run上有哪些order可成交 成交之 
