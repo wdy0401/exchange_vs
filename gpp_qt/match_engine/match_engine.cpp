@@ -64,16 +64,14 @@ void match_engine::updatetacticbooks()//根据新的orderbooks来判断时候发送order
 {
 	//const orderlist & ol,const orderbook & ob
 }
-void match_engine::add_order(const std::string & symbol,  const std::string & buysell, double price ,long size)
+void match_engine::add_order(const std::string & symbol,const std::string & buysell, double price ,long size)
 {
-    std::cout<<
-        symbol<<" "<<
-        buysell<<" "<<
-        price<<" "<<
-        size<<std::endl;
+    std::cout<<symbol<<" "<<buysell<<" "<<price<<" "<<size<<std::endl;
+	this->_ol.neworder(symbol,buysell,price,size);
 }
 void match_engine::add_order(const string & orderstr)
 {
-	cout <<orderstr<<endl;
-	
+	_order_message.ParseFromString(orderstr);
+	string buysell=_order_message.buysell()==0?"buy":"sell";
+	add_order(_order_message.symbol(),buysell,_order_message.price(),_order_message.size());
 }

@@ -9,6 +9,7 @@
 #include"../wtimer/wtimer.h"
 #include"../fillpolicy/fillpolicy.h"
 #include"../datafeed/datafeed.h"
+#include"../../protobuf/order.pb.h"
 //#include"../trans_event/trans_event.h"
 
 //tactic
@@ -59,6 +60,8 @@ private:
 	fillpolicy _fp;
 	orderlist _ol;
 	std::string _nowsymbol;
+	//QUOTE::quote_record _quote_message;
+	TRANS_ORDER::order _order_message;
 };
 
 /*
