@@ -68,6 +68,8 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QPushButton *ok_button_2;
     QPushButton *cancel_button_2;
+    QWidget *verticalLayoutWidget_3;
+    QVBoxLayout *verticalLayout_6;
     QLabel *label_5;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
@@ -79,14 +81,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(667, 585);
+        MainWindow->resize(779, 615);
         action = new QAction(MainWindow);
         action->setObjectName(QStringLiteral("action"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         textEdit = new QTextEdit(centralWidget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(10, 220, 601, 221));
+        textEdit->setGeometry(QRect(10, 220, 721, 221));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(10, 0, 322, 191));
@@ -145,7 +147,7 @@ public:
 
         verticalLayoutWidget_2 = new QWidget(centralWidget);
         verticalLayoutWidget_2->setObjectName(QStringLiteral("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(330, 0, 281, 191));
+        verticalLayoutWidget_2->setGeometry(QRect(420, 0, 311, 191));
         verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -266,15 +268,29 @@ public:
 
         verticalLayout_4->addLayout(verticalLayout_5);
 
-        label_5 = new QLabel(centralWidget);
+        verticalLayoutWidget_3 = new QWidget(centralWidget);
+        verticalLayoutWidget_3->setObjectName(QStringLiteral("verticalLayoutWidget_3"));
+        verticalLayoutWidget_3->setGeometry(QRect(10, 450, 721, 80));
+        verticalLayout_6 = new QVBoxLayout(verticalLayoutWidget_3);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        label_5 = new QLabel(verticalLayoutWidget_3);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(70, 480, 281, 31));
-        pushButton_3 = new QPushButton(centralWidget);
+
+        verticalLayout_6->addWidget(label_5, 0, Qt::AlignHCenter);
+
+        pushButton_3 = new QPushButton(verticalLayoutWidget_3);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(230, 480, 75, 23));
-        pushButton_4 = new QPushButton(centralWidget);
+
+        verticalLayout_6->addWidget(pushButton_3);
+
+        pushButton_4 = new QPushButton(verticalLayoutWidget_3);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(320, 480, 75, 23));
+
+        verticalLayout_6->addWidget(pushButton_4);
+
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
@@ -284,7 +300,7 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 667, 23));
+        menuBar->setGeometry(QRect(0, 0, 779, 23));
         MainWindow->setMenuBar(menuBar);
 
         retranslateUi(MainWindow);
@@ -314,7 +330,7 @@ public:
         ok_button_2->setText(QApplication::translate("MainWindow", "Ok", 0));
         cancel_button_2->setText(QApplication::translate("MainWindow", "Cancel", 0));
         label_5->setText(QApplication::translate("MainWindow", "test label for vs2010sp1", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "test utf8 gbk", 0));
         pushButton_4->setText(QApplication::translate("MainWindow", "PushButton", 0));
     } // retranslateUi
 
