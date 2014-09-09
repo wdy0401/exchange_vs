@@ -1,4 +1,5 @@
 #include"fillpolicy.h"
+#include"../match_engine/match_engine.h"
 #include"../wtimer/wtimer.h"
 #include"../trans_event/trans_event.h"
 
@@ -29,7 +30,9 @@ void fillpolicy::updateorderlist(orderlist & ol,orderbook & ob)
 			iter->second->orderfill(iter->second->_sizetofill);
 			ol._done_order[iter->first]=iter->second;
 			ol._run_order.erase(iter++);
+			pme->fp_te_tactic_fill("");
 			//te.fp_tactic("");//´Ë´¦´ý½ûÖ¹
+			
 		}
 		else
 		{

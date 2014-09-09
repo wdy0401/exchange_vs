@@ -55,7 +55,10 @@ public:
 	void add_order(const std::string & symbol,  const std::string & buysell, double price ,long size);
 	void add_order(const std::string & msg);
 
-	void fp_te_tactic(const std::string & msg);//fp通过te向tactic传消息
+//这部分是fp透过me发送给te的消息
+	void fp_te_tactic_fill(const std::string & msg);//fp通过te向tactic传消息
+//end
+
 private:
     std::map<std::string,orderbook> _orderbooks;
 	fillpolicy _fp;
