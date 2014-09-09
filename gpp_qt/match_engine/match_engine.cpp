@@ -79,3 +79,8 @@ void match_engine::add_order(const string & orderstr)
 	string buysell=_order_message.buysell()==0?"buy":"sell";
 	add_order(_order_message.symbol(),buysell,_order_message.price(),_order_message.size());
 }
+
+void match_engine::fp_te_tactic_fill(const std::string & msg)
+{
+	return;
+}
