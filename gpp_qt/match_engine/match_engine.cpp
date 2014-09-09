@@ -11,6 +11,10 @@ using namespace QUOTE;
 
 extern log_info loginfo;
 
+match_engine::match_engine()
+{
+	_fp.pme=this;
+}
 bool match_engine::loadtactic(std::string & tacticname)
 {
     loginfo.writeinfo(tacticname);

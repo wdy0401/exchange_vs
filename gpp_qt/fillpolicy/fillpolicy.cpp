@@ -12,6 +12,7 @@ using namespace std;
 //tactic 先得到fp的信息 后得到quote的信息 在截面数据的情形下是正确的 在实时情形下也应是正确的
 
 //next add te part
+
 void fillpolicy::updateorderlist(orderlist & ol,orderbook & ob)
 {
 	//消息fill					检测run上有哪些order可成交 成交之 
@@ -28,7 +29,7 @@ void fillpolicy::updateorderlist(orderlist & ol,orderbook & ob)
 			iter->second->orderfill(iter->second->_sizetofill);
 			ol._done_order[iter->first]=iter->second;
 			ol._run_order.erase(iter++);
-			te.fp_tactic("");
+			//te.fp_tactic("");//此处待禁止
 		}
 		else
 		{

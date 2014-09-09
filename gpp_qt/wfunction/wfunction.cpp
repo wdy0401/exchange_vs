@@ -35,8 +35,7 @@ list<string> wfunction::splitstring(std::string tp,std::string splitchar)
 	list<string> ret;
 	while(tp.size())
 	{		
-		static int index=0;
-		index=tp.find_first_of(splitchar);
+		int index=tp.find_first_of(splitchar);
 
 		string tmpstring=tp.substr(0,index);
 		ret.push_back(tmpstring);

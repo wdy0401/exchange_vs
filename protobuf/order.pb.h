@@ -38,12 +38,12 @@ class order;
 class orders;
 
 enum ebuysell {
-  BUY = 0,
-  SELL = 1
+  buy = 0,
+  sell = 1
 };
 bool ebuysell_IsValid(int value);
-const ebuysell ebuysell_MIN = BUY;
-const ebuysell ebuysell_MAX = SELL;
+const ebuysell ebuysell_MIN = buy;
+const ebuysell ebuysell_MAX = sell;
 const int ebuysell_ARRAYSIZE = ebuysell_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* ebuysell_descriptor();

@@ -2,6 +2,7 @@
 #include"../wfunction/wfunction.h"
 #include"../match_engine/match_engine.h"
 #include"../log_info/log_info.h"
+#include"../fillpolicy/fillpolicy.h"
 #include<iostream>
 #include<fstream>
 #include<string>

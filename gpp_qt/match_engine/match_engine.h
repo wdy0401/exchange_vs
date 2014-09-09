@@ -10,7 +10,6 @@
 #include"../fillpolicy/fillpolicy.h"
 #include"../datafeed/datafeed.h"
 #include"../../protobuf/order.pb.h"
-//#include"../trans_event/trans_event.h"
 
 //tactic
 //所需函数
@@ -33,14 +32,14 @@
 //查看fillpolicy（顺序给出fill load新order 给出ack or rej）
 //更新tactic（包含更新orderlist）
 
-//ME与datafeed利用event_trans沟通信息 控制信息流 
+//信息流均通过trans_event进行
 
 
 class match_engine
 {
 public:
 	
-	//friend class trans_event;
+	match_engine();
 
 	bool loadtactic(std::string &);
 	bool loadfillpolicy(std::string &);
@@ -50,36 +49,18 @@ public:
 	void setnowsymbol(const std::string & symbol);
 	void updateorderbook(const std::string &,const std::string &,long,double,long);//IF1405 bid 1 2100.2 5
 	void updatefp();//改写orderlist各个order的状态
-	void updatetactic();//根据新的orderbook来判断时候发送order
+	void updatetactic();//根新的orderbook来判断时候发送order
 	void updatetacticbooks();//在策略需要看多个book时使用 暂未实现
 		
 	void add_order(const std::string & symbol,  const std::string & buysell, double price ,long size);
 	void add_order(const std::string & msg);
+
+	void fp_te_tactic(const std::string & msg);//fp通过te向tactic传消息
 private:
     std::map<std::string,orderbook> _orderbooks;
 	fillpolicy _fp;
 	orderlist _ol;
 	std::string _nowsymbol;
-	//QUOTE::quote_record _quote_message;
 	TRANS_ORDER::order _order_message;
 };
-
-/*
-tactic 如何访问_ol
-通过ME？ 直接成为ME友员？
-
-？需要有tacticorder这样一个类 来对tactic维护的order进行处理？
-
-fp信息如何给到tactic？
-
-目前order orderlist orderbook 是交易所还是tactic的 
-
-*/
-
-/*
-目前order是满足交易所与tactic共同控制需求的
-
-*/
-
 #endif
-

@@ -145,14 +145,12 @@ int test_protobuf_order()
 	}
 	od.set_symbol("IF1410");
 	od.set_size(10);
-	od.set_buysell(TRANS_ORDER::BUY);
-//	od.set_buysell(0);
+	od.set_buysell(TRANS_ORDER::buy);
 	ods.add_order_list()->MergeFrom(od);
 	
 	od.set_symbol("IF1411");
 	od.set_size(20);
-	od.set_buysell(TRANS_ORDER::SELL);
-//	od.set_buysell(1);
+	od.set_buysell(TRANS_ORDER::sell);
 	ods.add_order_list()->MergeFrom(od);
 	if (!ods.SerializeToOstream(&output))
 	{ 

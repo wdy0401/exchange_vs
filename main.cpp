@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     //runtactic();
 	//test_protobuf();
 	//test_protobuf_order();
-	TestStream();
+	//TestStream();
     return a.exec();
 }
 

@@ -116,8 +116,8 @@ void protobuf_AddDesc_order_2eproto() {
     "l\022\017\n\004date\030\005 \001(\005:\0010\022\022\n\007begintm\030\006 \001(\001:\0010\022\020"
     "\n\005endtm\030\007 \001(\001:\0010\022\032\n\013marketorder\030\010 \001(\010:\005f"
     "alse\"0\n\006orders\022&\n\norder_list\030\001 \003(\0132\022.TRA"
-    "NS_ORDER.order*\035\n\010ebuysell\022\007\n\003BUY\020\000\022\010\n\004S"
-    "ELL\020\001", 285);
+    "NS_ORDER.order*\035\n\010ebuysell\022\007\n\003buy\020\000\022\010\n\004s"
+    "ell\020\001", 285);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "order.proto", &protobuf_RegisterTypes);
   order::default_instance_ = new order();
