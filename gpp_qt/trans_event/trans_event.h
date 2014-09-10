@@ -5,8 +5,6 @@
 #include<fstream>
 #include<string>
 #include<map>
-#include"../match_engine/match_engine.h"
-#include"../match_engine/order.h"
 
 //用来在ME与datafeed之间传递消息  2014-07-03
 //定义在 match_engine.cpp中 2014-07-14

@@ -3,6 +3,7 @@
 #include"../wtimer/wtimer.h"
 #include"../log_info/log_info.h"
 #include"../fillpolicy/fillpolicy.h"
+#include"../trans_event/trans_event.h"
 #include"protobuf/stdafx.h"
 #include"protobuf/quote.pb.h"
 
@@ -10,6 +11,7 @@ using namespace std;
 using namespace QUOTE;
 
 extern log_info loginfo;
+extern trans_event te;
 
 match_engine::match_engine()
 {
@@ -82,38 +84,46 @@ void match_engine::add_order(const string & orderstr)
 
 void match_engine::fp_te_tactic_order_send_ack(const std::string & orderid)
 {
+	te.order_send_ack(orderid);
 	return;
 }
 
 void match_engine::fp_te_tactic_order_change_size_ack(const std::string & orderid, long size)
 {
+	te.order_change_size_ack(orderid,size);
 	return;
 }
 void match_engine::fp_te_tactic_order_change_price_ack(const std::string & orderid, double price)
 {
+	te.order_change_price_ack(orderid, price);
 	return;
 }
 
 void match_engine::fp_te_tactic_order_fill(const std::string & orderid,long fillsize)
 {
+	te.order_fill(orderid,fillsize);
 	return;
 }
 
 void match_engine::fp_te_tactic_order_change_size_rej(const std::string & orderid, long size)
 {
+	te.order_change_size_rej(orderid,size);
 	return;
 }
 
 void match_engine::fp_te_tactic_order_change_price_rej(const std::string & orderid, double price)
 {
+	te.order_change_price_rej(orderid,price);
 	return;
 }
 
 void match_engine::fp_te_tactic_order_change_size_done(const std::string & orderid, long size)
 {
+	te.order_change_size_done(orderid,size);
 	return;
 }
 void match_engine::fp_te_tactic_order_change_price_done(const std::string & orderid, double price)
 {
+	te.order_change_price_done(orderid,price);
 	return;
 }
