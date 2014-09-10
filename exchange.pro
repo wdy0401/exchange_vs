@@ -26,7 +26,9 @@ SOURCES += main.cpp\
      gpp_qt/option/vnsnapshot.cpp\
      gpp_qt/trans_event/trans_event.cpp\
      gpp_qt/wfunction/wfunction.cpp\
-     gpp_qt/wtimer/wtimer.cpp
+     gpp_qt/wtimer/wtimer.cpp \
+     test_function.cpp \
+
 
 HEADERS  += mainwindow.h \
      gpp_qt/bar/bar.h\
@@ -42,7 +44,8 @@ HEADERS  += mainwindow.h \
      gpp_qt/option/vnsnapshot.h\
      gpp_qt/trans_event/trans_event.h\
      gpp_qt/wfunction/wfunction.h\
-     gpp_qt/wtimer/wtimer.h
+     gpp_qt/wtimer/wtimer.h \
+    test_function.h \
 
 
 FORMS    += mainwindow.ui
