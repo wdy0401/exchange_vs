@@ -56,7 +56,18 @@ public:
 	void add_order(const std::string & msg);
 
 //这部分是fp透过me发送给te的消息
-	void fp_te_tactic_fill(const std::string & msg);//fp通过te向tactic传消息
+	
+	void fp_te_tactic_order_send_ack(const std::string & orderid);
+	void fp_te_tactic_order_change_size_ack(const std::string & orderid, long size);
+	void fp_te_tactic_order_change_price_ack(const std::string & orderid, double price);
+
+	void fp_te_tactic_order_fill(const std::string & orderid,long fillsize);
+	
+	void fp_te_tactic_order_change_size_rej(const std::string & orderid, long size);
+	void fp_te_tactic_order_change_price_rej(const std::string & orderid, double price);
+	
+	void fp_te_tactic_order_change_size_done(const std::string & orderid, long size);
+	void fp_te_tactic_order_change_price_done(const std::string & orderid, double price);
 //end
 
 private:

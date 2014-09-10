@@ -72,8 +72,41 @@ void trans_event::datafeed_me(const std::string & message_type,const std::map<st
     loginfo.writeinfo(wfunction::itos(map_message.size()));
     return;//目前不处理复杂消息
 }
-void trans_event::fp_tactic(const std::string & message)
+
+void trans_event::order_send_ack(const std::string & orderid)
 {
-	//这个还得写个protobuffer
-	//cout<<type<<"  "<<info<<endl;
+	return;
+}
+
+void trans_event::order_change_size_ack(const std::string & orderid, long size)
+{
+	return;
+}
+void trans_event::order_change_price_ack(const std::string & orderid, double price)
+{
+	return;
+}
+
+void trans_event::order_fill(const std::string & orderid,long fillsize)
+{
+	return;
+}
+
+void trans_event::order_change_size_rej(const std::string & orderid, long size)
+{
+	return;
+}
+
+void trans_event::order_change_price_rej(const std::string & orderid, double price)
+{
+	return;
+}
+
+void trans_event::order_change_size_done(const std::string & orderid, long size)
+{
+	return;
+}
+void trans_event::order_change_price_done(const std::string & orderid, double price)
+{
+	return;
 }

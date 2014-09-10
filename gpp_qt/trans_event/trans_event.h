@@ -26,7 +26,20 @@ public:
 	void datafeed_me(const std::string &,const std::map<std::string,std::string> &);//非标准消息
 	
     void tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size);//add order
-	void fp_tactic(const std::string & message);
+	
+	//fp to tactic
+	void order_send_ack(const std::string & orderid);
+	void order_change_size_ack(const std::string & orderid, long size);
+	void order_change_price_ack(const std::string & orderid, double price);
+
+	void order_fill(const std::string & orderid,long fillsize);
+	
+	void order_change_size_rej(const std::string & orderid, long size);
+	void order_change_price_rej(const std::string & orderid, double price);
+	
+	void order_change_size_done(const std::string & orderid, long size);
+	void order_change_price_done(const std::string & orderid, double price);
+	//end
 private:
 	bool _recordmessage;
 	std::ifstream * _pfile;

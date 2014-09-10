@@ -80,7 +80,40 @@ void match_engine::add_order(const string & orderstr)
 	add_order(_order_message.symbol(),buysell,_order_message.price(),_order_message.size());
 }
 
-void match_engine::fp_te_tactic_fill(const std::string & msg)
+void match_engine::fp_te_tactic_order_send_ack(const std::string & orderid)
+{
+	return;
+}
+
+void match_engine::fp_te_tactic_order_change_size_ack(const std::string & orderid, long size)
+{
+	return;
+}
+void match_engine::fp_te_tactic_order_change_price_ack(const std::string & orderid, double price)
+{
+	return;
+}
+
+void match_engine::fp_te_tactic_order_fill(const std::string & orderid,long fillsize)
+{
+	return;
+}
+
+void match_engine::fp_te_tactic_order_change_size_rej(const std::string & orderid, long size)
+{
+	return;
+}
+
+void match_engine::fp_te_tactic_order_change_price_rej(const std::string & orderid, double price)
+{
+	return;
+}
+
+void match_engine::fp_te_tactic_order_change_size_done(const std::string & orderid, long size)
+{
+	return;
+}
+void match_engine::fp_te_tactic_order_change_price_done(const std::string & orderid, double price)
 {
 	return;
 }

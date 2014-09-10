@@ -30,9 +30,7 @@ void fillpolicy::updateorderlist(orderlist & ol,orderbook & ob)
 			iter->second->orderfill(iter->second->_sizetofill);
 			ol._done_order[iter->first]=iter->second;
 			ol._run_order.erase(iter++);
-			pme->fp_te_tactic_fill("");
-			//te.fp_tactic("");//´Ë´¦´ý½ûÖ¹
-			
+			//pme->fp_te_tactic_fill("");
 		}
 		else
 		{
