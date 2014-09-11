@@ -45,6 +45,9 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="tactic_lib">
+      <UniqueIdentifier>{af38c6c9-fe8f-4f4c-b7d2-d640e5640db3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gpp_qt\bar\bar.cpp">
@@ -178,10 +181,18 @@
     <ClInclude Include="protobuf\order.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tactic\tactic\tactic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="mainwindow.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="tactic\Release\tactic.lib">
+      <Filter>tactic_lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>

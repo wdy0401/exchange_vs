@@ -4,6 +4,7 @@
 #include"../match_engine/order.h"
 #include"../log_info/log_info.h"
 #include"../fillpolicy/fillpolicy.h"
+#include"../tactic/tactic/tactic.h"
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -14,6 +15,7 @@ extern match_engine me;
 extern datafeed df;
 extern MainWindow * mw;
 extern log_info loginfo;
+extern tactic * ptc;
 using namespace std;
 
 trans_event::trans_event()
@@ -73,41 +75,35 @@ void trans_event::datafeed_me(const std::string & message_type,const std::map<st
     loginfo.writeinfo(wfunction::itos(map_message.size()));
     return;//目前不处理复杂消息
 }
-
 void trans_event::order_send_ack(const std::string & orderid)
 {
-	return;
+	ptc->order_send_ack(orderid);
 }
-
 void trans_event::order_change_size_ack(const std::string & orderid, long size)
 {
-	return;
+	ptc->order_change_size_ack(orderid , size);
 }
 void trans_event::order_change_price_ack(const std::string & orderid, double price)
 {
-	return;
+	ptc->order_change_price_ack(orderid , price);
 }
-
 void trans_event::order_fill(const std::string & orderid,long fillsize)
 {
-	return;
+	ptc->order_fill(orderid , fillsize);
 }
-
 void trans_event::order_change_size_rej(const std::string & orderid, long size)
 {
-	return;
+	ptc->order_change_size_rej(orderid , size);
 }
-
 void trans_event::order_change_price_rej(const std::string & orderid, double price)
 {
-	return;
+	ptc->order_change_price_rej(orderid , price);
 }
-
 void trans_event::order_change_size_done(const std::string & orderid, long size)
 {
-	return;
+	ptc->order_change_size_done(orderid , size);
 }
 void trans_event::order_change_price_done(const std::string & orderid, double price)
 {
-	return;
+	ptc->order_change_price_done(orderid , price);
 }

@@ -65,7 +65,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -106,7 +106,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -178,14 +178,15 @@
     <ClInclude Include="protobuf\quote.pb.h" />
     <ClInclude Include="protobuf\stdafx.h" />
     <ClInclude Include="protobuf\targetver.h" />
+    <ClInclude Include="tactic\tactic\tactic.h" />
     <ClInclude Include="test_function.h" />
     <CustomBuild Include="mainwindow.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\release" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\release" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing mainwindow.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\debug" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DLL  "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtWidgets" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtGui" "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\include\QtCore" "-I.\debug" "-I." "-IE:\Qt\vs_Qt5.3.1\5.3\msvc2010_opengl\mkspecs\win32-msvc2010" "-I.\GeneratedFiles"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing mainwindow.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
     </CustomBuild>
@@ -211,6 +212,9 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="tactic\Release\tactic.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

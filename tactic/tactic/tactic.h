@@ -31,6 +31,20 @@ public:
 	//order相关
 	void add_order_symbol(const std::string &);
 	void del_order_symbol(const std::string &);
+
+	//fp to tactic info transfer
+	void order_send_ack(const std::string & orderid);
+	void order_change_size_ack(const std::string & orderid, long size);
+	void order_change_price_ack(const std::string & orderid, double price);
+
+	void order_fill(const std::string & orderid,long fillsize);
+	
+	void order_change_size_rej(const std::string & orderid, long size);
+	void order_change_price_rej(const std::string & orderid, double price);
+	
+	void order_change_size_done(const std::string & orderid, long size);
+	void order_change_price_done(const std::string & orderid, double price);
+	//end
 	
 private:
 	//工具

@@ -3,7 +3,7 @@
 #include<map>
 #include<iostream>
 #include<fstream>
-#include<stdlib.h>
+#include<stdlib.h> 
 
 #include"./protobuf/stdafx.h"
 #include"./protobuf/quote.pb.h"
@@ -14,8 +14,6 @@
 
 #pragma comment(lib,"libprotobuf.lib")
 #pragma comment(lib,"libprotoc.lib")
-
-
 
 #include"gpp_qt/cfg/cfg.h"
 #include"gpp_qt/wtimer/wtimer.h"
@@ -36,6 +34,8 @@
 
 #include"test_function.h"
 
+#include"tactic/tactic/tactic.h"
+
 using namespace std;
 using namespace QUOTE;
 
@@ -47,6 +47,7 @@ match_engine me;
 datafeed df;
 trans_event te;
 wtimer tm;
+tactic * ptc;
 
 MainWindow * mw;
 QApplication * qa;
@@ -60,11 +61,28 @@ int main(int argc, char *argv[])
     mw=&w;
 
     w.show();
+	
+	
+	string dllname;
+	//dll部分尚未成功  911继续试
+	//解决方案中加入tactic_lib目录 并把lib放里面就可以了 
+	#ifdef _DEBUG
+	dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Debug/tactic.dll";
+	#else
+	dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Release/tactic.dll";
+	#endif
+	HINSTANCE hdll=LoadLibrary(dllname.c_str());
+		
+	tactic tc;
+	ptc=&tc;
+	FreeLibrary(hdll);
 
+	
     //runtactic();
 	//test_protobuf();
 	//test_protobuf_order();
-	//TestStream();
+	//TestStream();	
+
     return a.exec();
 }
 
