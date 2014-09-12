@@ -25,6 +25,8 @@ public:
 	
     void tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size);//add order
 	
+	void trans_quote(const std::string & symbol, const std::string & ba, long level, double price, long size);
+	
 	//fp to tactic
 	void order_send_ack(const std::string & orderid);
 	void order_change_size_ack(const std::string & orderid, long size);

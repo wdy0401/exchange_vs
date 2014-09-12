@@ -36,7 +36,7 @@ void match_engine::rec_update(const std::string & symbol, const std::string & ba
 	setnowsymbol(symbol);
 	updateorderbook(symbol,ba,level,price,size);
 	updatefp();
-	updatetactic();
+	updatetactic(symbol,ba,level,price,size);
 	updatetacticbooks();
 }
 void match_engine::updateorderbook(const std::string & symbol, const std::string & ba, long level, double price, long size)//IF1405 bid 1 2100.2 5
@@ -62,9 +62,10 @@ void match_engine::updatefp()//改写orderlist各个order的状态
 	_fp.updateorderlist(_ol,_orderbooks.find(_nowsymbol)->second);
 }
 
-void match_engine::updatetactic()//根据新的orderbook来判断时候发送order
+void match_engine::updatetactic(const std::string & symbol, const std::string & ba, long level, double price, long size)//根据新的orderbook来判断时候发送order
 {
-    //const orderlist & ol,const orderbook & ob
+	te.trans_quote(symbol,ba,level,price,size);
+	//const orderlist & ol,const orderbook & ob
 }
 void match_engine::updatetacticbooks()//根据新的orderbooks来判断时候发送order
 {

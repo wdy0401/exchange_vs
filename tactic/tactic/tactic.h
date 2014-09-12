@@ -26,7 +26,7 @@ public:
 	//接收收这些symbol的quote 其余quote不接
 	void del_quote_symbol(const std::string &);
 	//屏蔽这些symbol的quote
-	void readquote();
+	void readquote(const std::string & symbol, const std::string & ba, long level, double price, long size);
 	
 	//order相关
 	void add_order_symbol(const std::string &);
@@ -50,8 +50,7 @@ private:
 	//工具
 	void _delete_same_symbol(std::list<std::string> *);
 	void _delete_symbol(std::list<std::string> *,const std::string & );
-
-	
+		
 	std::list<std::string> _quote_symbols;
 	std::list<std::string> _order_symbols;
 

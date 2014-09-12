@@ -49,7 +49,7 @@ public:
 	void setnowsymbol(const std::string & symbol);
 	void updateorderbook(const std::string &,const std::string &,long,double,long);//IF1405 bid 1 2100.2 5
 	void updatefp();//改写orderlist各个order的状态
-	void updatetactic();//根新的orderbook来判断时候发送order
+	void updatetactic(const std::string & symbol, const std::string & ba, long level, double price, long size);//根新的orderbook来判断时候发送order
 	void updatetacticbooks();//在策略需要看多个book时使用 暂未实现
 		
 	void add_order(const std::string & symbol,  const std::string & buysell, double price ,long size);

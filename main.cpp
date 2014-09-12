@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 	FreeLibrary(hdll);
 
 	
-    //runtactic();
+    runtactic();
 	//test_protobuf();
 	//test_protobuf_order();
 	//TestStream();	

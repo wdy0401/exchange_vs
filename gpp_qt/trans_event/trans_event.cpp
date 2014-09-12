@@ -75,6 +75,10 @@ void trans_event::datafeed_me(const std::string & message_type,const std::map<st
     loginfo.writeinfo(wfunction::itos(map_message.size()));
     return;//目前不处理复杂消息
 }
+void trans_event::trans_quote(const std::string & symbol, const std::string & ba, long level, double price, long size)
+{
+	ptc->readquote(symbol,ba,level,price,size);
+}
 void trans_event::order_send_ack(const std::string & orderid)
 {
 	ptc->order_send_ack(orderid);

@@ -12,9 +12,9 @@ tactic::tactic()
 	return;
 }
 
-void tactic::readquote()
+void tactic::readquote(const std::string & symbol, const std::string & ba, long level, double price, long size)
 {
-
+	cout << "TACTIC OUT : QUOTE READ "<<symbol<<" "<<ba<<" "<<level<<" "<<price<<" "<<size<<endl;	
 }
 
 void tactic::add_quote_symbol(const string & symbol)

@@ -36,7 +36,6 @@ while(<DATA>)
 	my $line=join" , ",@par;
 	print "ptc->$name($line);";print"\n";
 	print "}\n";	
-
 }
 
 
