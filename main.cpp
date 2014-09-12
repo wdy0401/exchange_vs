@@ -63,18 +63,18 @@ int main(int argc, char *argv[])
     w.show();
 	
 	
-	string dllname;
-	#ifdef _DEBUG
-	dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Debug/tactic.dll";
-	#else
-	dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Release/tactic.dll";
-	#endif
-	HINSTANCE hdll=LoadLibrary(dllname.c_str());
+	//string dllname;
+	//#ifdef _DEBUG
+	//dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Debug/tactic.dll";
+	//#else
+	//dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Release/tactic.dll";
+	//#endif
+	//HINSTANCE hdll=LoadLibrary(dllname.c_str());
 		
 	tactic tc;
 	ptc=&tc;
 	ptc->set_te(&te);
-	FreeLibrary(hdll);
+	//FreeLibrary(hdll);
 
 	
     runtactic();
