@@ -10,6 +10,7 @@ using namespace std;
 
 tactic::tactic()
 {
+	cout<<"Only for test lib change"<<endl;
 	return;
 }
 void tactic::set_te(trans_event * tpte)
