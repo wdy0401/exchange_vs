@@ -65,7 +65,7 @@ void trans_event::datafeed_me(const std::string & symbol, const std::string & ba
     mw->set_text(ts);
     me.rec_update(symbol,ba,level,price,size);
 }
-void trans_event::tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size)
+void trans_event::add_order(const std::string & symbol,  const std::string & buysell, double price ,long size)
 {
     me.add_order(symbol,buysell,price,size);
 }
@@ -110,4 +110,9 @@ void trans_event::order_change_size_done(const std::string & orderid, long size)
 void trans_event::order_change_price_done(const std::string & orderid, double price)
 {
 	ptc->order_change_price_done(orderid , price);
+}
+void trans_event::fetch_tactic_info()
+{
+	string tmpstring(ptc->get_pending_message());
+	cout<<"ORDER PENDING MESSAGE "<<tmpstring<<endl;
 }

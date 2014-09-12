@@ -64,8 +64,6 @@ int main(int argc, char *argv[])
 	
 	
 	string dllname;
-	//dll部分尚未成功  911继续试
-	//解决方案中加入tactic_lib目录 并把lib放里面就可以了 
 	#ifdef _DEBUG
 	dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Debug/tactic.dll";
 	#else
@@ -75,6 +73,7 @@ int main(int argc, char *argv[])
 		
 	tactic tc;
 	ptc=&tc;
+	ptc->set_te(&te);
 	FreeLibrary(hdll);
 
 	

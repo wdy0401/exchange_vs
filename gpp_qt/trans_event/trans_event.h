@@ -23,9 +23,11 @@ public:
 	void datafeed_me(const std::string & symbol, const std::string & ba, long level, double price, long size);//标准bid ask 消息
 	void datafeed_me(const std::string &,const std::map<std::string,std::string> &);//非标准消息
 	
-    void tactic_me(const std::string & symbol,  const std::string & buysell, double price ,long size);//add order
-	
+	//quote transfer
 	void trans_quote(const std::string & symbol, const std::string & ba, long level, double price, long size);
+	void fetch_tactic_info();
+	//send order 
+	void add_order(const std::string & symbol,  const std::string & buysell, double price ,long size);//add order
 	
 	//fp to tactic
 	void order_send_ack(const std::string & orderid);

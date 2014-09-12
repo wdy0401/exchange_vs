@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "tactic.h"
 #include "iostream"
+#include "../../gpp_qt/trans_event/trans_event.h"
 
 using namespace std;
 
@@ -11,10 +12,22 @@ tactic::tactic()
 {
 	return;
 }
-
+void tactic::set_te(trans_event * tpte)
+{
+	_pte=tpte;
+}
+const char * tactic::get_pending_message()
+{
+	const char * ret=pending_message.c_str();
+	pending_message.clear();
+	return ret;
+}
+	
 void tactic::readquote(const std::string & symbol, const std::string & ba, long level, double price, long size)
 {
-	cout << "TACTIC OUT : QUOTE READ "<<symbol<<" "<<ba<<" "<<level<<" "<<price<<" "<<size<<endl;	
+	cout << "TACTIC OUT : QUOTE READ "<<symbol<<" "<<ba<<" "<<level<<" "<<price<<" "<<size<<endl;
+	//把需要的order写到pending_message中
+	//涉及到 如何把返回的orderid放到order中的问题 也就是torder 和 orderid如何匹配
 }
 
 void tactic::add_quote_symbol(const string & symbol)

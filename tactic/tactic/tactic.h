@@ -13,6 +13,11 @@
 
 #include<list>
 #include<string>
+#include "../../gpp_qt/trans_event/trans_event.h"
+
+
+class torder;
+
 
 // 此类是从 tactic.dll 导出的
 class TACTIC_API tactic {
@@ -20,13 +25,18 @@ public:
 	tactic(void);
 	// TODO: 在此添加您的方法。	
 	void init();
+	void set_te(trans_event *);
 
 	//quote相关
 	void add_quote_symbol(const std::string &);
 	//接收收这些symbol的quote 其余quote不接
 	void del_quote_symbol(const std::string &);
 	//屏蔽这些symbol的quote
+	
+	
 	void readquote(const std::string & symbol, const std::string & ba, long level, double price, long size);
+	const char * get_pending_message();
+	
 	
 	//order相关
 	void add_order_symbol(const std::string &);
@@ -54,4 +64,27 @@ private:
 	std::list<std::string> _quote_symbols;
 	std::list<std::string> _order_symbols;
 
+	trans_event * _pte;
+	std::list<torder *> _ol;
+	std::string pending_message;
+
+};
+class torder
+{
+public:
+	std::string orderid;
+	std::string symbol;
+	std::string buysell;
+	double price;
+	long size;
+	
+	long begtm;
+	long endtm;
+	long sizetofill;
+	long sizefilled;
+	long alreadyfilled;
+	
+	bool tag_cancel;
+	long tag_changesize;
+	double tag_changeprice;
 };

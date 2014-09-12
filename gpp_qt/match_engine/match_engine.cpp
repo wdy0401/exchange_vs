@@ -65,6 +65,7 @@ void match_engine::updatefp()//改写orderlist各个order的状态
 void match_engine::updatetactic(const std::string & symbol, const std::string & ba, long level, double price, long size)//根据新的orderbook来判断时候发送order
 {
 	te.trans_quote(symbol,ba,level,price,size);
+	te.fetch_tactic_info();
 	//const orderlist & ol,const orderbook & ob
 }
 void match_engine::updatetacticbooks()//根据新的orderbooks来判断时候发送order
