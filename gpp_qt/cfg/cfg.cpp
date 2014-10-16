@@ -46,7 +46,7 @@ void cfg::loadfile()
 		_pfile=NULL;
 		cerr << "********************************************\n*\n*\n*\n";
 		cerr << "Cannot openfile " << _cfgfile.c_str() << endl;
-		cerr << "Press set cfgfile and restart";
+		cerr << "Please set cfgfile and restart";
 		cerr << "\n*\n*\n*\n********************************************"<<endl;
 		getchar();
 		return;
