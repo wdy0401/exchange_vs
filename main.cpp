@@ -57,30 +57,14 @@ int main(int argc, char *argv[])
     MainWindow w;
     qa=&a;
     mw=&w;
-
     w.show();
-	
-	//20140922 猜测是用lib给定的信息在默认目录找的
-	//string dllname;
-	//#ifdef _DEBUG
-	//dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Debug/tactic.dll";
-	//#else
-	//dllname="C:/Users/xzqh/Desktop/exchange/exchange_vs/tactic/Release/tactic.dll";
-	//#endif
-	//HINSTANCE hdll=LoadLibrary(dllname.c_str());
-		
+
 	tactic tc;
 	ptc=&tc;
 	ptc->set_te(&te);
-	//FreeLibrary(hdll);
-
-	
     runtactic();
-	//test_protobuf();
-	//test_protobuf_order();
-	//TestStream();	
 
-    return a.exec();
+	return a.exec();
 }
 
 //test git
